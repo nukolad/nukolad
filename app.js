@@ -1,4 +1,8 @@
 // Проверяем, что приложение запущено в Telegram
+const tg = window.Telegram.WebApp;
+const user = tg.initDataUnsafe.user; // Данные пользователя
+console.log("ID пользователя:", user?.id);
+console.log("Имя:", user?.first_name);
 if (window.Telegram && window.Telegram.WebApp) {
     const tg = window.Telegram.WebApp;
 
